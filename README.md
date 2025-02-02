@@ -2,6 +2,13 @@
 
 A Django-based application to manage FAQs with multi-language translation support and WYSIWYG editor integration.
 
+## Video Reference
+
+You can view the demo of the project in action by clicking the link below:
+
+[Watch the demo](https://www.loom.com/share/dbf7d0b684334003b7112267db36dfcb?sid=a0749575-d94e-46a9-94b8-d60a4d779cf5)
+
+
 ## Features
 - **Multilingual FAQ Management:** Store and retrieve FAQs in multiple languages with automated translations.
 - **WYSIWYG Editor Integration:** Format FAQ answers with `django-ckeditor`.
@@ -38,7 +45,7 @@ A Django-based application to manage FAQs with multi-language translation suppor
    pip install -r requirements.txt
    ```
 
-3. Configure Redis (for caching):
+3. Configure Redis:
    - Install Redis: [Redis Installation Guide](https://redis.io/docs/getting-started/installation/)
    - Start the Redis server.
 

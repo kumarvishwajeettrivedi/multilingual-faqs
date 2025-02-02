@@ -1,5 +1,3 @@
-Here’s the `README.md` content formatted so you can directly copy and paste it into a new file named `README.md`:
-
 ```markdown
 # FAQ Management System
 

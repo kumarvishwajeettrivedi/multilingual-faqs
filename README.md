@@ -12,11 +12,10 @@ A Django-based application to manage FAQs with multi-language translation suppor
 
 ## Tech Stack
 - **Backend:** Django, Django Rest Framework
-- **Database:** SQLite (default), can be swapped with PostgreSQL/MySQL
+- **Database:** PostgreSQL
 - **Cache:** Redis
 - **Translation:** `googletrans` or Google Translate API
 - **Editor:** django-ckeditor
-- **Deployment:** Docker, Heroku
 
 ---
 
@@ -25,8 +24,8 @@ A Django-based application to manage FAQs with multi-language translation suppor
 ### Prerequisites
 - Python 3.9+
 - Django 4.0+
-- Redis (for caching)
-- Docker (optional)
+- Redis
+
 
 ### Steps
 1. Clone the repository:
@@ -77,31 +76,6 @@ A Django-based application to manage FAQs with multi-language translation suppor
 
 ---
 
-## Deployment
-
-### Using Docker
-1. Build and run the Docker container:
-   ```bash
-   docker-compose up --build
-   ```
-
-2. Access the app at [http://localhost:8000](http://localhost:8000).
-
-### Deploy to Heroku
-1. Install Heroku CLI and log in:
-   ```bash
-   heroku login
-   ```
-
-2. Create a Heroku app and push your code:
-   ```bash
-   heroku create faq-management
-   git push heroku main
-   ```
-
-3. Configure environment variables on Heroku.
-
----
 
 ## Testing
 1. Run unit tests:

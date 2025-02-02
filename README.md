@@ -1,4 +1,4 @@
-# FAQ Management System
+## FAQ Management System
 
 A Django-based application to manage FAQs with multi-language translation support and WYSIWYG editor integration.
 
@@ -7,7 +7,6 @@ A Django-based application to manage FAQs with multi-language translation suppor
 You can view the demo of the project in action by clicking the link below:
 
 [Watch the demo](https://www.loom.com/share/dbf7d0b684334003b7112267db36dfcb?sid=a0749575-d94e-46a9-94b8-d60a4d779cf5)
-
 
 ## Features
 - **Multilingual FAQ Management:** Store and retrieve FAQs in multiple languages with automated translations.
@@ -32,15 +31,16 @@ You can view the demo of the project in action by clicking the link below:
 - Python 3.9+
 - Django 4.0+
 - Redis
-
+- PostgreSQL
 
 ### Steps
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/faq-management-system.git
    cd faq-management-system
+   ```
 
-2. install dependencies:
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
@@ -50,19 +50,29 @@ You can view the demo of the project in action by clicking the link below:
    - Start the Redis server.
 
 4. Set up environment variables in `.env`:
+   Create a `.env` file in the project root and add the following variables:
    ```env
-   SECRET_KEY=your-secret-key
-   DEBUG=True
+   SECRET_KEY=your_django_secret_key
+   DATABASE_URL=postgres://yourusername:yourpassword@localhost:5432/yourdbname
    REDIS_URL=redis://localhost:6379/0
    ```
 
-5. Apply migrations and run the server:
+5. Apply migrations:
    ```bash
    python manage.py migrate
+   ```
+
+6. Create a superuser to access the Django admin:
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+7. Run the server:
+   ```bash
    python manage.py runserver
    ```
 
-6. Access the application at [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+8. Access the application at [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 
 ---
 
@@ -71,18 +81,17 @@ You can view the demo of the project in action by clicking the link below:
 ### Fetch FAQs
 - **Default (English):**
   ```bash
-  curl http://localhost:8000/api/faqs/
+  http://localhost:8000/api/faqs/
   ```
 - **Specific Language:**
   ```bash
-  curl http://localhost:8000/api/faqs/?lang=hi
+  http://localhost:8000/api/faqs/?lang=hi
   ```
 
 ### Add FAQ (Admin Panel)
 - Navigate to `/admin` and add FAQs with translations.
 
 ---
-
 
 ## Testing
 1. Run unit tests:

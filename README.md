@@ -1,4 +1,3 @@
-```markdown
 # FAQ Management System
 
 A Django-based application to manage FAQs with multi-language translation support and WYSIWYG editor integration.
@@ -34,7 +33,6 @@ A Django-based application to manage FAQs with multi-language translation suppor
    ```bash
    git clone https://github.com/your-username/faq-management-system.git
    cd faq-management-system
-   ```
 
 2. install dependencies:
    ```bash

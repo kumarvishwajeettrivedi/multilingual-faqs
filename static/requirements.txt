@@ -1,0 +1,9 @@
+Django==4.2
+djangorestframework
+django-ckeditor
+django-redis
+redis
+celery
+pytest
+flake8
+gunicorn
